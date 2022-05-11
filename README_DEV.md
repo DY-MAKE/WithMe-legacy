@@ -3,13 +3,22 @@
 [React Readme](https://github.com/DY-MAKE/WithMe/client/README.md)
 [Nest Readme](https://github.com/DY-MAKE/WithMe/server/README.md)
 
+---
+
 ## Branch
 
 브랜치 관리 방법
 
 ### master
 
-가능한 오류 없이 유지시키기
+출시 전용 브랜치
+오류 없이 유지시키기
+
+만약 병합 이후 오류가 발생한다면 해당 커밋은 **revert**
+
+### develop
+
+개발 전용 브랜치, master 병합 전 코드 충돌이나 오류들을 확인하는 브랜치
 
 만약 병합 이후 오류가 발생한다면 해당 커밋은 **revert**
 
@@ -17,7 +26,7 @@
 
 새로운 기능 개발/개선등 작업이 필요할 때 사용
 
-브랜치에서의 개발이 완료되면 master 브랜치로 병합
+브랜치에서의 개발이 완료되면 develop 브랜치로 병합
 
 ##### Example
 
