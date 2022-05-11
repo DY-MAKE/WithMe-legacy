@@ -1,3 +1,6 @@
+const { resolve } = require('path');
+const path = require('path');
+
 module.exports = {
     env: {
         browser: true,
@@ -16,13 +19,13 @@ module.exports = {
         },
         ecmaVersion: 'latest',
         sourceType: 'module',
-        project: 'tsconfig.json'
+        project: resolve('tsconfig.json'),
     },
     ignorePatterns: ['.eslintrc.js', 'craco.config.js'],
     plugins: ['react', '@typescript-eslint'],
     rules: {
         '@typescript-eslint/no-unused-vars': 'warn',
-        'prettier/prettier': 'error',
+        // 'prettier/prettier': 'error',
         'react/function-component-definition': 'off',
         'react/jsx-filename-extension': [
             1,
