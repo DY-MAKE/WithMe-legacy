@@ -1,4 +1,5 @@
 const CracoAlias = require('craco-alias');
+const CracoSwcPlugin = require('craco-swc');
 
 module.exports = {
     plugins: [
@@ -10,5 +11,6 @@ module.exports = {
                 tsConfigPath: './tsconfig.paths.json',
             },
         },
+        { plugin: CracoSwcPlugin }
     ],
 };
