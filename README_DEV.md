@@ -1,7 +1,7 @@
 # 프로젝트별 README
 
-[React Readme](https://github.com/DY-MAKE/WithMe/client/README.md)
-[Nest Readme](https://github.com/DY-MAKE/WithMe/server/README.md)
+[React Readme](https://github.com/DY-MAKE/WithMe/blob/develop/client/README.md)
+[Nest Readme](https://github.com/DY-MAKE/WithMe/blob/develop/server/README.md)
 
 ---
 

@@ -25,4 +25,4 @@
 
 ---
 
-[README for Developer](https://github.com/DY-MAKE/Withme/README_DEV.md)
+[README for Developer](https://github.com/DY-MAKE/WithMe/blob/develop/README_DEV.md)
