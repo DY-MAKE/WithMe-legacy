@@ -8,6 +8,7 @@
 ## Branch
 
 브랜치 관리 방법
+**기본적으로 git-flow를 사용합니다.**
 
 ### master
 
