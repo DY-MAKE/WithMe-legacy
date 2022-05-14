@@ -1,0 +1,27 @@
+{
+  "name": "@withme/root",
+  "version": "1.0.0",
+  "description": "위드미는 인공지능 기반 시각 장애 보조 어플리케이션 서비스입니다.",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "client",
+      "server"
+    ]
+  },
+  "scripts": {
+    "client": "yarn workspace @withme/client",
+    "server": "yarn workspace @withme/server",
+    "client:dev": "yarn client dev",
+    "server:dev": "yarn server dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DY-MAKE/WithMe.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DY-MAKE/WithMe/issues"
+  },
+  "homepage": "https://github.com/DY-MAKE/WithMe#readme"
+}
