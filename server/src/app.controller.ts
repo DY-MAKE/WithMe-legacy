@@ -3,7 +3,7 @@ import { AppService } from './app.service';
 import Server, { createProxy } from 'http-proxy';
 import { Request, Response } from 'express';
 
-@Controller('')
+@Controller()
 export class AppController {
     private server: Server;
     constructor(private readonly appService: AppService) {
@@ -15,9 +15,10 @@ export class AppController {
         return this.appService.getHello();
     }
 
-    @All('/*')
+    // TODO: dev 모드에서만 활성화 되도록 변경, prod 모드에서는 static file serve
+    @All('*')
     proxyAll(@Req() request: Request, @Res() response: Response): void {
-        console.log('Proxy Server');
+        // console.log('DevProxy', request.headers);
         this.server.web(request, response, { target: 'http://localhost:3000' });
     }
 }
