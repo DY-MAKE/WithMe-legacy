@@ -18,6 +18,7 @@ http://localhost:3001
 $ yarn dev
 
 # production mode
+# build before run production
 $ yarn prod
 ```
 
