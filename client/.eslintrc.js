@@ -8,6 +8,7 @@ module.exports = {
         'airbnb',
         'airbnb-typescript',
         'plugin:prettier/recommended',
+        'plugin:import/recommended'
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -45,13 +46,6 @@ module.exports = {
             'error',
             {
                 groups: ['builtin', 'external', ['parent', 'sibling'], 'index'],
-                pathGroups: [
-                    {
-                        pattern: 'angular',
-                        group: 'external',
-                        position: 'before'
-                    }
-                ],
                 alphabetize: {
                     order: 'asc',
                     caseInsensitive: true,
@@ -61,5 +55,12 @@ module.exports = {
         ],
         'jsx-a11y/media-has-caption': 'off',
         'jsx-a11y/control-has-associated-label': 'off'
+    },
+    settings: {
+        "import/resolver": {
+            "node": {
+                "extensions": [".js", ".jsx", ".ts", ".tsx"]
+            }
+        }
     },
 };
