@@ -1,7 +1,8 @@
 {
-    "name": "withme_react",
+    "name": "@withme/client",
     "version": "0.1.0",
     "private": true,
+    "homepage": "/",
     "dependencies": {
         "@craco/craco": "^6.4.3",
         "@testing-library/jest-dom": "^5.14.1",
@@ -26,7 +27,7 @@
         "dev:nb": "cross-env BROWSER=none craco start",
         "prod": "yarn build && yarn serve",
         "serve": "serve -l 80 build",
-        "build": "cross-env GENERATE_SOURCEMAP=false craco build | gnomon",
+        "build": "cross-env GENERATE_SOURCEMAP=false craco build ",
         "eject": "react-scripts eject",
         "lint": "eslint .",
         "lint:fix": "eslint . --fix"
@@ -53,7 +54,7 @@
         "@typescript-eslint/eslint-plugin": "^5.16.0",
         "@typescript-eslint/parser": "^5.16.0",
         "craco-alias": "^3.0.1",
-        "craco-swc": "^0.5.1",
+        "craco-esbuild": "^0.5.1",
         "cross-env": "^7.0.3",
         "eslint": "^8.12.0",
         "eslint-config-airbnb": "^19.0.4",
@@ -64,6 +65,8 @@
         "eslint-plugin-react-hooks": "^4.3.0",
         "gnomon": "^1.5.0",
         "prettier": "^2.6.1",
-        "serve": "^13.0.2"
-    }
+        "serve": "^13.0.2",
+        "speed-measure-webpack-plugin": "^1.5.0"
+    },
+    "proxy": "http://localhost:3001"
 }
