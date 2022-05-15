@@ -14,7 +14,8 @@
     "server": "yarn workspace @withme/server",
     "client:dev": "yarn client dev",
     "server:dev": "yarn server dev",
-    "dev": "concurrently \"yarn client:dev\" \"yarn server:dev\"",
+    "dev": "concurrently \"yarn client dev:nb\" \"yarn server:dev\"",
+    "prod": "yarn server prod",
     "build": "yarn client build && yarn server build"
   },
   "repository": {
