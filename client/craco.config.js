@@ -1,5 +1,9 @@
 const CracoAlias = require('craco-alias');
-const CracoSwcPlugin = require('craco-swc');
+const CracoEsbuildPlugin = require('craco-esbuild');
+const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
+const path = require('path');
+
+const smp = new SpeedMeasurePlugin();
 
 module.exports = {
     plugins: [
@@ -11,6 +15,22 @@ module.exports = {
                 tsConfigPath: './tsconfig.paths.json',
             },
         },
-        { plugin: CracoSwcPlugin }
+        // { plugin: CracoSwcPlugin }
+        { plugin: CracoEsbuildPlugin },
+        // {
+        //     plugin: new HtmlWebpackPlugin({
+        //         template: path.resolve('./public/index.html'),
+        //         filename: path.resolve('./index.html'),
+        //         favicon: path.resolve('./public/favicon.ico')
+        //     })
+        // }
     ],
+    webpack: {
+        configure: (webpackConfig, { env, paths }) => {
+            paths.appBuild = webpackConfig.output.path = path.resolve('..', './build_react');
+            return webpackConfig;
+
+            // return smp.wrap(webpackConfig);  // FIXME: craco + smp 구성에서 실행/빌드 시 여기저기서 이상한 오류가 발생함, 해결 전까지 smp 비활성화
+        }
+    }
 };

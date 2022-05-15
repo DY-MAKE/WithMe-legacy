@@ -1,9 +1,32 @@
 # 프로젝트별 README
 
 [React Readme](https://github.com/DY-MAKE/WithMe/blob/develop/client/README.md)
+
 [Nest Readme](https://github.com/DY-MAKE/WithMe/blob/develop/server/README.md)
 
 ---
+
+## Available Scripts
+
+### Run
+
+default port is 3001
+http://localhost:3001
+
+```bash
+# development
+$ yarn dev
+
+# production mode
+$ yarn prod
+```
+
+### Build
+
+```bash
+# Build all
+$ yarn build
+```
 
 ## Branch
 
