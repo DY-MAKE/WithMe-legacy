@@ -17,7 +17,7 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
         project: './tsconfig.json',
-        // tsconfigRootDir: __dirname,
+        tsconfigRootDir: __dirname,
     },
     ignorePatterns: ['.eslintrc.js', 'craco.config.js'],
     plugins: ['react', '@typescript-eslint'],

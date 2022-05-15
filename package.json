@@ -13,7 +13,9 @@
     "client": "yarn workspace @withme/client",
     "server": "yarn workspace @withme/server",
     "client:dev": "yarn client dev",
-    "server:dev": "yarn server dev"
+    "server:dev": "yarn server dev",
+    "dev": "concurrently \"yarn client:dev\" \"yarn server:dev\"",
+    "build": "yarn client build && yarn server build"
   },
   "repository": {
     "type": "git",
@@ -23,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/DY-MAKE/WithMe/issues"
   },
-  "homepage": "https://github.com/DY-MAKE/WithMe#readme"
+  "homepage": "https://github.com/DY-MAKE/WithMe#readme",
+  "devDependencies": {
+    "concurrently": "^7.2.0"
+  }
 }
