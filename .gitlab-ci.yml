@@ -1,6 +1,12 @@
 # variables:
 # DOCKER_HOST: tcp://localhost:2375
 
+# variables:
+#   DOCKER_DRIVE: overlay2
+
+# services:
+#   - docker:dind
+
 stages:
   - build
 
@@ -9,10 +15,9 @@ stages:
 
 before_script:
   - docker version
-  - docker-compose version
 
 build:
   stage: build
   tags:
     - build
-  script: "docker-compose build"
+  script: "docker build -t gitlab.dyhs.kr/withme ."
