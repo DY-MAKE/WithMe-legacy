@@ -1,11 +1,11 @@
-variables:
-  DOCKER_HOST: tcp://localhost:2375
+# variables:
+# DOCKER_HOST: tcp://localhost:2375
 
 stages:
   - build
 
-image:
-  name: docker/compose:latest
+# image:
+#   name: docker/compose:latest
 
 before_script:
   - docker version
