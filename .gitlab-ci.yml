@@ -1,6 +1,9 @@
 stages:
   - build
 
+image:
+  name: docker/compose:latest
+
 build:
   stage: build
   tags:
