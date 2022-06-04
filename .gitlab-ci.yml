@@ -8,16 +8,17 @@
 #   - docker:dind
 
 stages:
+  - installBuildx
   - build
 
 # image:
 #   name: docker/compose:latest
 
-before_script:
-  - docker buildx
+# before_script:
+#   - docker buildx
 
-install-buildx:
-  stage: install-buildx
+installBuildx:
+  stage: installBuildx
   tags:
     - withme-build
   script:
