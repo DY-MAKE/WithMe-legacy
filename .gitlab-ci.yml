@@ -14,7 +14,7 @@ stages:
 #   name: docker/compose:latest
 
 before_script:
-  - docker version
+  - docker buildx
 
 build:
   stage: build
