@@ -19,5 +19,5 @@ before_script:
 build:
   stage: build
   tags:
-    - build
-  script: "docker build -t gitlab.dyhs.kr/withme ."
+    - withme-build
+  script: "docker buildx --platform linux/x86-64 build -t gitlab.dyhs.kr/withme ."
