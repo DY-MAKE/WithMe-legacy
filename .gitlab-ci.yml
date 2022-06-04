@@ -12,6 +12,7 @@ stages:
 
 # image:
 #   name: docker/compose:latest
+image: jdrouet/docker-with-buildx:stable
 
 before_script:
   - docker buildx
