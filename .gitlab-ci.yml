@@ -12,10 +12,20 @@ stages:
 
 # image:
 #   name: docker/compose:latest
-image: jdrouet/docker-with-buildx:stable
 
 before_script:
   - docker buildx
+
+install-buildx:
+  stage: install-buildx
+  tags:
+    - withme-build
+  script:
+    - LATEST=$(wget -qO- "https://api.github.com/repos/docker/buildx/releases/latest" | jq -r .name)
+    - wget https://github.com/docker/buildx/releases/download/$LATEST/buildx-$LATEST.linux-arm64
+    - chmod a+x buildx-$LATEST.linux-arm64
+    - mkdir -p ~/.docker/cli-plugins
+    - mv buildx-$LATEST.linux-arm64 ~/.docker/cli-plugins/docker-buildx
 
 build:
   stage: build
